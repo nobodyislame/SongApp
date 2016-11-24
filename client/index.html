@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<title>Song App</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
+	<script type="text/javascript" src="libs/jquery/jquery.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="libs/angular/angular.min.js"></script>
+
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="controllers/controllers.js"></script>
+	<script type="text/javascript" src="directives/directive.js"></script>
+	<script type="text/javascript" src="services/services.js"></script>
+</head>
+<body ng-controller="songCtrl">
+	<div class="row">
+		<form ng-submit="!editmode ? saveSong(): update(newsong)">
+			<div class="col-md-5">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Artist name" ng-model="newsong.song"/>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Song name" ng-model="newsong.artist"/>
+				</div>
+			</div>
+			<div class="col-md-2" ng-if="!editmode">
+				<div class="form-group">
+					<button class="btn btn-primary">Add</button>					
+				</div>
+			</div>
+			<div class="col-md-2" ng-if="editmode">
+				<div class="form-group">
+					<button class="btn btn-primary">Update</button>					
+				</div>
+			</div>
+		</form>
+	</div>
+	<table class="table table-stripped table-condensed">
+		<tbody>
+			<tr ng-repeat="song in songs | orderBy:'song'">
+				<td><strong>{{$index+1}}</strong></td>
+				<td><strong>{{song.song}}</strong></td>
+				<td><strong>{{song.artist}}</strong></td>
+				<td>
+					<div class="pull-right">
+						<div class="pull-left">
+							<div rating max="5" score="song.score" set="update(song)" song="song"></div>
+						</div>
+						<div class="pull-right">
+							<div class="btn btn-info" ng-click="editSong(song)">
+								<span class="glyphicon glyphicon-pencil"></span>
+							</div>
+							<div class="btn btn-danger" ng-click="removeSong(song._id)">
+								<span class="glyphicon glyphicon-trash"></span>
+							</div>
+						</div>
+					</div>
+				</td>	
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

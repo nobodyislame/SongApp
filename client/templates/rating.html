@@ -1,0 +1,9 @@
+<div class="rating">
+	<a href="#" 
+	   ng-repeat = "star in stars" 
+	   ng-mouseover="hover($index)" 
+	   ng-mouseleave="stopHover()" 
+	   ng-click="setRating($index)">
+		<span ng-class="starClass(star, $index)"></span>
+	</a>
+</div>

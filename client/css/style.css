@@ -1,0 +1,21 @@
+body{
+	margin:20px;
+}
+.rating {
+	margin-top: 8px;
+}
+.glyphicon{
+	padding-left:2px;
+	cursor: pointer;
+}
+a{
+	font-size:17px;
+	padding: 0.1px; 
+}
+.rating a, a:hover{
+	text-decoration: none;
+}
+
+.form-group button{
+	width:200px;
+}
