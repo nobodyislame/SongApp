@@ -38,8 +38,7 @@ angular.module('app.controller',[])
 				if(err){
 					throw err;
 				}
-				$scope.newSong.song = "";
-				$scope.newsong.artist="";
+				$scope.newsong={};
 				$scope.loadPage();
 			});
 		}
