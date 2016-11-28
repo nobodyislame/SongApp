@@ -1,5 +1,5 @@
 body{
-	margin:20px;
+	margin:0px;
 }
 .rating {
 	margin-top: 8px;
@@ -17,5 +17,11 @@ a{
 }
 
 .form-group button{
-	width:200px;
+	width:100%;
+}
+.btn-group-lg>.btn, .btn-lg{
+	width: 100%
+}
+.well{
+	cursor: pointer;
 }
