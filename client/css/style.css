@@ -25,3 +25,9 @@ a{
 .well{
 	cursor: pointer;
 }
+#content{
+	overflow: scroll;
+}
+td strong{
+	font-size: 20px;
+}

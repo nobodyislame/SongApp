@@ -20,10 +20,15 @@ angular.module("app", [ 'ui.router',
 				controller:'DetailsCtrl'
 			})
 
-			.state('playback', {
-				url:'/playback',
-				templateUrl:'views/playback.html',
-				controller:'PlaybackCtrl'
+			.state('play', {
+				url:'/play/:id',
+				templateUrl:'views/play.html',
+				controller:'PlayCtrl'
+			})
+			
+			.state('about', {
+				url:'/about',
+				templateUrl:'views/about.html',
 			});
 
 		$urlRouterProvider.otherwise('home');

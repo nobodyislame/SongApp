@@ -1,15 +1,17 @@
-<div class="row">
-	<div ng-repeat="(key, value) in details">
-		<div class="clearfix" ng-if="$index % 4 ==0"></div>
-		<div class="col-md-3">
-			<div class="well text-center">
-				<div>
-					<span class="glyphicon glyphicon-user"></span>
-					<span class="text-info"><strong> {{key}} </strong></span>
-				</div>
-				<div>
-					<span class="glyphicon glyphicon-headphones"></span>
-					<span class="text-info"><strong>Tracks {{value}}</strong></span>
+<div class="container">
+	<div class="row">
+		<div ng-repeat="(key, value) in details">
+			<div class="clearfix" ng-if="$index % 4 ==0"></div>
+			<div class="col-md-3">
+				<div class="well text-center">
+					<div>
+						<span class="glyphicon glyphicon-user"></span>
+						<span class="text-info"><strong> {{key}} </strong></span>
+					</div>
+					<div>
+						<span class="glyphicon glyphicon-headphones"></span>
+						<span class="text-info"><strong>Tracks {{value}}</strong></span>
+					</div>
 				</div>
 			</div>
 		</div>

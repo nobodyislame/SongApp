@@ -9,6 +9,10 @@ var songSchema = mongoose.Schema({
 		type:String,
 		required:true
 	},
+	url:{
+		type:String,
+		required:true
+	},
 	score:{
 		type:Number,
 		default:0
@@ -35,6 +39,7 @@ module.exports.updateSong = function(id, song, options, callback) {
 	var update = {
 		song : song.song,
 		artist : song.artist,
+		url : song.url,
 		score : song.score
 	}
 

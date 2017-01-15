@@ -67,10 +67,10 @@ angular.module('app.controller',[])
 		$scope.loadPage();
 	}])
 
-	.controller('PlaybackCtrl', function($scope){
-		console.log("in playback control");
-	})
+	.controller('PlayCtrl', ['$scope',function(){
 
+	}])
+	
 	.controller('DetailsCtrl', ['$scope', 'Song', function($scope, Song){
 		
 		Song.get(function(err, result){

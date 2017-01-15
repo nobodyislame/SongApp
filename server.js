@@ -36,6 +36,7 @@ app.post('/api/songs', function(req, res){
 	var song = {};
 	song.song = req.body.song;
 	song.artist = req.body.artist;
+	song.url = req.body.url;
 	Song.addSong(song, function(err, song){
 		if(err){
 			throw err;
