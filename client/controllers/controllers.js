@@ -67,10 +67,20 @@ angular.module('app.controller',[])
 		$scope.loadPage();
 	}])
 
-	.controller('PlayCtrl', ['$scope',function(){
-
+	.controller('PlayCtrl', ['$scope','$stateParams','Song',function($scope, $stateParams, Song){
+		var id = $stateParams.id;
+		$scope.loadPage = function(){
+			Song.getById(id, function(err, result){
+				if(err){
+					throw err;
+				}
+				console.log(result);
+				$scope.result = result;
+			});
+		}
+		$scope.loadPage();
 	}])
-	
+
 	.controller('DetailsCtrl', ['$scope', 'Song', function($scope, Song){
 		
 		Song.get(function(err, result){

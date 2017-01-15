@@ -7,6 +7,12 @@ angular.module('app.service',[])
 						callback(null, response);
 					});
 			},
+			getById: function(id,callback){
+				$http.get('/api/songs/'+id)
+					.success(function(response){
+						callback(null, response);
+					})
+			},
 			set:function(id,song, callback){
 				$http.put('/api/songs/'+id,song)
 					.success(function(response){

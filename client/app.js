@@ -1,6 +1,7 @@
 "use strict";
 
 angular.module("app", [ 'ui.router',
+						'youtube-embed',
 						'app.controller', 
 						'app.directive',
 						'app.service'
