@@ -9,7 +9,10 @@
 		  <div class="panel-body">
 		  	<div class="text-center">
 		  		<h3>{{result.song}} - {{result.artist}}</h3>
-		  		<youtube-video video-url="result.url"></youtube-video>
+		  		<hr>
+		  		<div class="embed-responsive embed-responsive-16by9">
+		  			<youtube-video class="embed-responsive-item" video-url="result.url"></youtube-video>
+		  		</div>
 		  	</div>
 		  </div>
 		</div>

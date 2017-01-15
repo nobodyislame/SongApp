@@ -25,9 +25,14 @@ a{
 .well{
 	cursor: pointer;
 }
-#content{
-	overflow: scroll;
-}
+
 td strong{
 	font-size: 20px;
+}
+#about{
+	margin-top: 50px;
+}
+img {
+	width: 140px !important;
+	height: 140px !important;
 }
